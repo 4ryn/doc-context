@@ -37,3 +37,7 @@ def hackrx_run(document: Document, qdrant_client: QdrantClient = Depends(get_qdr
         answers.append(answer)
 
     return Answer(answers=answers)
+from fastapi import FastAPI
+
+app = FastAPI()
+app.include_router(router)
